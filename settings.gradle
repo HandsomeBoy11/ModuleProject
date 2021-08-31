@@ -1,0 +1,5 @@
+include ':BaseMudule'
+include ':MyModule'
+include ':HomeModule'
+include ':app'
+rootProject.name = "ModuleProject"
