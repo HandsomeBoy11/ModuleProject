@@ -1,12 +1,14 @@
 package com.longfor.homemodule.view.fragment
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.longfor.basemudule.utils.serVisible
+import com.longfor.basemudule.RouterConstant
+import com.longfor.basemudule.base.BaseFragment
+import com.longfor.basemudule.utils.Logger
+import com.longfor.basemudule.utils.RouterMap
 import com.longfor.homemodule.R
+import com.longfor.homemodule.view.activity.HomeMainActivity
+import com.longfor.homemodule.view.activity.HomeSecondActivity
 import kotlinx.android.synthetic.main.home_module_fragment_home.*
 
 
@@ -17,18 +19,26 @@ import kotlinx.android.synthetic.main.home_module_fragment_home.*
  *  @Des  :
  *
  */
-class HomeFragment :Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return LayoutInflater.from(context).inflate(R.layout.home_module_fragment_home,container,false)
-//        return super.onCreateView(inflater, container, savedInstanceState)
+class HomeFragment : BaseFragment() {
+
+    override fun getLayoutId(): Int = R.layout.home_module_fragment_home
+
+    override fun initView() {
+        tvName.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("parm1", "abc")
+                putString("parm2", "def")
+            }
+//            this.startActivityForResult(Intent(context,HomeSecondActivity::class.java),100)
+            RouterMap.openUri(context, RouterConstant.Path.HOME_SECOND_PATH, bundle, 111)
+        }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        tvName.serVisible(false)
+    override fun initData() {
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Logger.d(data?.getStringExtra("aa") ?: "asdfghjkl;")
     }
 }

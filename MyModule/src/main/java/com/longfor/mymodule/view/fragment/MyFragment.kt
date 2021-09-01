@@ -1,11 +1,10 @@
 package com.longfor.homemodule.view.fragment
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.alibaba.android.arouter.launcher.ARouter
+import com.longfor.basemudule.RouterConstant
+import com.longfor.basemudule.base.BaseFragment
 import com.longfor.mymodule.R
+import kotlinx.android.synthetic.main.my_module_fragment_home.*
 
 
 /**
@@ -15,13 +14,16 @@ import com.longfor.mymodule.R
  *  @Des  :
  *
  */
-class MyFragment :Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return LayoutInflater.from(context).inflate(R.layout.my_module_fragment_home,container,false)
-//        return super.onCreateView(inflater, container, savedInstanceState)
+class MyFragment : BaseFragment() {
+
+    override fun getLayoutId(): Int = R.layout.my_module_fragment_home
+
+    override fun initView() {
+        tvName.setOnClickListener {
+            ARouter.getInstance().build(RouterConstant.Path.HOME_SECOND_PATH).navigation();
+        }
+    }
+
+    override fun initData() {
     }
 }

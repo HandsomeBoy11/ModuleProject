@@ -1,8 +1,8 @@
-package com.longfor.homemodule.view.activity
+package com.longfor.mymodule.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
+import com.longfor.basemudule.base.BaseActivity
 import com.longfor.homemodule.view.fragment.MyFragment
 import com.longfor.mymodule.R
 
@@ -13,7 +13,7 @@ import com.longfor.mymodule.R
  *  @Des  :
  *
  */
-class MyMainActivity : AppCompatActivity() {
+class MyMainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.my_module_activity_main)

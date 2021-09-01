@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ModuleProject</string>
+    <string name="app_name">HomeModuleProject</string>
+    <string name="home_btn">HOME</string>
+    <string name="my_btn">MY</string>
 </resources>
