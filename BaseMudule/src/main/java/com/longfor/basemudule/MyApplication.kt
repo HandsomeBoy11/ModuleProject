@@ -1,7 +1,7 @@
 package com.longfor.basemudule
 
-import android.app.Application
 import android.util.Log
+import androidx.multidex.MultiDexApplication
 import com.alibaba.android.arouter.launcher.ARouter
 import com.longfor.basemudule.utils.Logger
 
@@ -12,7 +12,7 @@ import com.longfor.basemudule.utils.Logger
  *  @Des  :
  *
  */
-open class MyApplication : Application() {
+open class MyApplication : MultiDexApplication() {
     companion object {
         var application: MyApplication? = null
     }
@@ -24,7 +24,7 @@ open class MyApplication : Application() {
         if (BuildConfig.DEBUG) {           // These two lines must be written before init, otherwise these configurations will be invalid in the init process
             ARouter.openLog();     // Print log
             ARouter.openDebug();   // Turn on debugging mode (If you are running in InstantRun mode, you must turn on debug mode! Online version needs to be closed, otherwise there is a security risk)
-            Logger.isDebug=true
+            Logger.isDebug = true
         }
         ARouter.init(this)
     }
