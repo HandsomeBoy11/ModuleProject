@@ -17,7 +17,7 @@
         android:visibility="gone"
         tools:visibility="visible" />
 
-    <com.longfor.basemudule.base.pageContainer.PageContainerView
+    <com.wj.basemudule.base.pageContainer.PageContainerView
         android:id="@+id/pageContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-package com.longfor.basemudule
+package com.wj.basemudule
 
 import org.junit.Test
 

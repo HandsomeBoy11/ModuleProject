@@ -1,4 +1,4 @@
-package com.longfor.moduleproject
+package com.wj.moduleproject
 
 import org.junit.Test
 

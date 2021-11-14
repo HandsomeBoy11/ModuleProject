@@ -55,7 +55,7 @@ android {
 
 dependencies {
     api project(path: ':BaseMudule')
-//    api 'com.longfor:BaseLib-Android:1.0.0'
+//    api 'com.wj:BaseLib-Android:1.0.0'
     //ARouter
     kapt 'com.alibaba:arouter-compiler:1.5.2'
 }

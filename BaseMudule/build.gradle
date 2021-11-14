@@ -72,7 +72,7 @@ dependencies {
 //uploadArchives {
 //    repositories {
 //        mavenDeployer {
-//            pom.groupId = 'com.longfor'
+//            pom.groupId = 'com.wj'
 //            pom.artifactId = "BaseLib-Android"
 //            pom.version = "1.0.0"
 //            pom.packaging = 'aar'

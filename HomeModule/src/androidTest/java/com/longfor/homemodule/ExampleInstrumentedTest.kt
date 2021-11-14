@@ -1,4 +1,4 @@
-package com.longfor.homemodule
+package com.wj.homemodule
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.longfor.homemodule.test", appContext.packageName)
+        assertEquals("com.wj.homemodule.test", appContext.packageName)
     }
 }

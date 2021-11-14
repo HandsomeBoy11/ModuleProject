@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.longfor.moduleproject"
+        applicationId "com.wj.moduleproject"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -48,7 +48,7 @@ dependencies {
         implementation project(path: ':MyModule')
     }else{
         implementation project(path: ':BaseMudule')
-//        api 'com.longfor:BaseLib-Android:1.0.0'
+//        api 'com.wj:BaseLib-Android:1.0.0'
     }
     kapt 'com.alibaba:arouter-compiler:1.5.2'
 }

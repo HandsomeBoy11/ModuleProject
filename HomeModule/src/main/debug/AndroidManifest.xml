@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.longfor.homemodule">
+    package="com.wj.homemodule">
 
     <application
         android:name=".view.HomeApplication"
